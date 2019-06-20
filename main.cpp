@@ -1,12 +1,13 @@
 #include <iostream>
 
-#include "bunny.h"
+#include "bunnymgr.h"
 
 using namespace std;
 
 int main()
 {
     srand(time(NULL));
-    bunny b1();
+    bunnymgr mgr(5);
+    mgr.run();
     return 0;
 }

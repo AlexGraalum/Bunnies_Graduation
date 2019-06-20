@@ -15,7 +15,11 @@ bunny::~bunny()
 
 bunny::bunny(const bunny& other)
 {
-    //copy ctor
+    Setage(other.Getage());
+    Setname(other.Getname());
+    Setfur(other.Getfur());
+    Setsex(other.Getsex());
+    Setvampire(other.Getvampire());
 }
 
 bunny& bunny::operator=(const bunny& rhs)
