@@ -2,32 +2,32 @@
 #define BUNNYMGR_H
 
 #include "bunny.h"
-
-struct node{
-    bunny *bun;
-    node *next;
-    node(bunny *b){
-        bun = b;
-        next = nullptr;
-    };
-    bunny *Getbunny(){
-        return &bun;
-    };
-};
+#include "variables.h"
 
 class bunnymgr{
     public:
         bunnymgr(int );
         virtual ~bunnymgr();
-        void initialize(int );
-        void add(bunny *);
         void run();
-
     protected:
 
     private:
-        unsigned int population;
-        node *head = nullptr;
+        unsigned int fieldSize = 1600;
+        std::list<bunny *> mgr;
+        std::vector<char> field;
+        int population;
+        void AgeBuns();
+        void BreedBuns();
+        void Mate(bunny *);
+        int CountVamps();
+        void TurnBuns();
+        bool AllVampire();
+        std::list<bunny *>::const_iterator GetRand();
+        std::list<bunny *>::const_iterator kill(std::list<bunny *>::const_iterator it);
+        void sleep(int );
+        void PrintBuns();
+        void initialize(int );
+        void add(bunny *);
 };
 
 #endif // BUNNYMGR_H

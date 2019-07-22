@@ -1,13 +1,14 @@
 #include <iostream>
 
 #include "bunnymgr.h"
+#include "variables.h"
 
 using namespace std;
 
-int main()
-{
+int main(){
     srand(time(NULL));
-    bunnymgr mgr(5);
-    mgr.run();
+    bunnymgr *manager = new bunnymgr(5);
+    manager->run();
+    delete manager;
     return 0;
 }

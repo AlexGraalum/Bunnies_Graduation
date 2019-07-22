@@ -1,8 +1,18 @@
 #ifndef VARIABLES_H
 #define VARIABLES_H
 
+#include <iostream>
+#include <iomanip>
+#include <list>
+#include <vector>
+#include <algorithm>
+#include <iterator>
 #include <stdlib.h>
 #include <time.h>
+#include <thread>
+#include <chrono>
+
+const int MAX_POP = 1000;
 
 enum SexType{
     MALE,
@@ -11,24 +21,24 @@ enum SexType{
 
 namespace Names{
     enum MALE_NAMES{
-        M1 = "M.A",
-        M2 = "M.B",
-        M3 = "M.C",
-        M4 = "M.D"
+        M1,
+        M2,
+        M3,
+        M4
     };
 
     enum FEMALE_NAMES{
-        F1 = "F.A",
-        F2 = "F.B",
-        F3 = "F.C",
-        F4 = "F.D"
+        F1,
+        F2,
+        F3,
+        F4
     };
 };
 enum FurType{
-    WHITE = "white",
-    BROWN = "brown",
-    BLACK = "black",
-    SPOTTED = "spotted"
+    WHITE,
+    BROWN,
+    BLACK,
+    SPOTTED
 };
 
 #endif // VARIABLES_H
